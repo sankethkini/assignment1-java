@@ -27,6 +27,16 @@ public class AddItemsInteractive {
         System.out.println("Enter the type "+Display.raw+" , "+Display.imported+" , "+Display.manufactured);
         String type=sc.next();
         System.out.println(Display.line);
+        addItem(
+                name,
+                price,
+                quantity,
+                type,
+                items
+        );
+    }
+
+    public static void addItem(String name,Float price,Integer quantity,String type,List<Item> items) throws InvalidItemInput{
         Item item= CreateItem.create(name,type,price,quantity);
         ValidateItem.validate(item);
         items.add(item);

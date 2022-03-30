@@ -15,10 +15,10 @@ public class Application {
     private List<Item> items;
     Scanner sc;
     public Application() {
-        this.items=new ArrayList<Item>();
+        this.items= new ArrayList<>();
         sc=new Scanner(System.in);
     }
-    public void run(String args[]){
+    public void run(String[] args){
         try{
             AddItemsFromCmdArgs.run(items,args);
             while (true){

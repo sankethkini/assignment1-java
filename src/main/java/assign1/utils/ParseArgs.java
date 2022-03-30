@@ -1,12 +1,11 @@
 package assign1.utils;
 
-import assign1.constants.CmdFlags;
 import org.apache.commons.cli.*;
 
 import java.util.HashMap;
 
 public class ParseArgs {
-    public static HashMap<String,String> parse(String []args) throws ParseException,MissingOptionException{
+    public static HashMap<String,String> parse(String []args) throws ParseException {
 
         Options options = new Options();
         Option name=new Option("name", "name", true, "name of the item");

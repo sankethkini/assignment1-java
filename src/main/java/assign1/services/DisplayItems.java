@@ -10,8 +10,8 @@ public class DisplayItems {
         System.out.println(Display.line);
         for(Item item:items){
             System.out.println(
-                    "name: "+item.getName()+" total price: "+Float.toString(item.calculateTax())
-                    +" quantity: "+Integer.toString(item.getQuantity())+" type: "+item.getType()
+                    "name: "+item.getName()+" total price: "+ item.calculateTax()
+                    +" quantity: "+ item.getQuantity() +" type: "+item.getType()
             );
         }
         System.out.println(Display.line);

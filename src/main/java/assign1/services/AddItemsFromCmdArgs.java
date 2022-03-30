@@ -2,16 +2,15 @@ package assign1.services;
 
 import assign1.exceptions.InvalidItemInput;
 import assign1.models.Item;
+import assign1.utils.CreateItem;
+import assign1.utils.ParseArgs;
+import org.apache.commons.cli.ParseException;
 
 import java.util.HashMap;
 import java.util.List;
-import assign1.utils.CreateItem;
-import assign1.utils.ParseArgs;
-import org.apache.commons.cli.MissingOptionException;
-import org.apache.commons.cli.ParseException;
 
 public class AddItemsFromCmdArgs {
-    public static void run(List<Item> items, String args[]) throws ParseException, InvalidItemInput, MissingOptionException {
+    public static void run(List<Item> items, String[] args) throws ParseException, InvalidItemInput {
 
         HashMap<String,String> map= ParseArgs.parse(args);
         Item item=CreateItem.create(
